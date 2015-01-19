@@ -4,10 +4,12 @@
     <title>Окабэ Ринтаро Software</title>
 </head>
 <body>
+    <div id="output"></div>
    <script type="text/javascript">
    	if(navigator.geolocation) {
        		navigator.geolocation.getCurrentPosition( function(position) {
-       			console.log("lat: " + position.coords.latitude + ", lon: " + position.coords.longitude);
+       		    var output = document.getElementById("output");
+       			output.innerHTML = "lat: " + position.coords.latitude + ", lon: " + position.coords.longitude;
        		});
    	}
    </script>
